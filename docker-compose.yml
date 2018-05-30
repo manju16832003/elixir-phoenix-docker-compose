@@ -1,0 +1,12 @@
+version: "3.1"
+services:
+  web:
+    build: .
+    ports:
+      - "4000:4000"
+    command: mix phoenix.server
+    environment:
+      - MIX_ENV=dev
+      - PORT=4000
+    volumes:
+      - .:/app
