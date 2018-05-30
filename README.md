@@ -1,12 +1,12 @@
 # Dockerizing Phoenix application
 
-Step one: Docker Installation
+Step one: Make sure you have docker installed. (Docker Install)[https://docs.docker.com/install/]
 
-Step Two: Docker Compose installation
+Step Two: Make sure you have `docker-compose` installed (Docker Compose Install)[https://docs.docker.com/compose/install/]
 
-Step three: Lets create Docker Image
+Step three: Lets create Docker Image (Refer to Dockerfile in this repo)
 
-Step four: 	Lets create Compose file
+Step four: Lets create Compose file (Refer to docker-compose.yml file in this repo)
 
 Step five: Create our project
 
