@@ -12,7 +12,23 @@ Step five: Create our project
 
 `sudo docker-compose run web mix phoenix.new . --app phoenix_docker --no-brunch`
 
-Step six: Start the service
+Step six: Create DB, Link to Web and Configure
+
+	Refer to `docker-compose.yml` database section
+
+	Since we have already installed the application, Go to `config/dev.exs` to configure database.
+
+	```
+		config :phoenix_docker, PhoenixDocker.Repo,
+	  	adapter: Ecto.Adapters.Postgres,
+	  	username: System.get_env("DB_ENV_POSTGRES_USER"),
+	  	password: System.get_env("DB_ENV_POSTGRES_PASSWORD"),
+	  	hostname: System.get_env("DB_ENV_POSTGRES_HOST"),
+	  	database: "phoenix_docker_dev",
+	  	pool_size: 10
+	```
+
+Step sevent: Start the service
 
  > docker-compose up
 
@@ -25,3 +41,19 @@ Step six: Start the service
 	```
 
 	that's because, we haven't set up the database connection yet.
+
+
+## Commands
+
+	Install dependencies -> `sudo docker-compose run web mix deps.get`
+
+	Compile -> `sudo docker-compose run web mix deps.compile`
+
+	Create the database-> `sudo docker-compose run web mix ecto.create`
+
+	Update Postgres to latest version in case Postgres throwing an error `mix deps.update postrgex`
+
+### References
+
+	https://medium.com/@cristiano.codelab/dockerizing-a-phoenix-application-4e62e7888ae8
+

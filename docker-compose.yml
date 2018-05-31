@@ -10,3 +10,12 @@ services:
       - PORT=4000
     volumes:
       - .:/app
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_HOST=postgres
