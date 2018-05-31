@@ -41,6 +41,8 @@ Step sevent: Start the service
 	```
 
 	that's because, we haven't set up the database connection yet.
+	
+	**Note** -> The phoenix app is still does not connect to DB. _still investigating_ 
 
 
 ## Commands
