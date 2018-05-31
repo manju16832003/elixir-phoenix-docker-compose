@@ -18,15 +18,15 @@ Step six: Create DB, Link to Web and Configure
 
 	Since we have already installed the application, Go to `config/dev.exs` to configure database.
 
-	```
-		config :phoenix_docker, PhoenixDocker.Repo,
-	  	adapter: Ecto.Adapters.Postgres,
-	  	username: System.get_env("DB_ENV_POSTGRES_USER"),
-	  	password: System.get_env("DB_ENV_POSTGRES_PASSWORD"),
-	  	hostname: System.get_env("DB_ENV_POSTGRES_HOST"),
-	  	database: "phoenix_docker_dev",
-	  	pool_size: 10
-	```
+```
+  config :phoenix_docker, PhoenixDocker.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: System.get_env("DB_ENV_POSTGRES_USER"),
+  password: System.get_env("DB_ENV_POSTGRES_PASSWORD"),
+  hostname: System.get_env("DB_ENV_POSTGRES_HOST"),
+  database: "phoenix_docker_dev",
+  pool_size: 10
+```
 
 Step sevent: Start the service
 
